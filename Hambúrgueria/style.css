@@ -1,0 +1,427 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #2c2c2c;
+  background: #ffffff;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 34px 0 38px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.section-title.center {
+  justify-content: center;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  font-size: 11px;
+  color: #6b6b6b;
+}
+
+.title-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: center/contain no-repeat;
+}
+
+.history-icon {
+  background-image: url("img/icon-history.png");
+}
+
+.chef-icon {
+  background-image: url("img/icon-chef.png");
+}
+
+.pin-icon {
+  background-image: url("img/icon-pin.png");
+}
+
+.hero {
+  position: relative;
+  height: 412px;
+  background: url("img/hero.png") center/cover no-repeat;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f4f4f4;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  padding: 0 16px;
+}
+
+.hero-content h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  max-width: 620px;
+}
+
+.history {
+  background: #ffffff;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.history-text p {
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: #6a6a6a;
+  line-height: 1.6;
+}
+
+.timeline {
+  background: #dcdcdc;
+  border-radius: 12px;
+  padding: 16px 16px 12px;
+}
+
+.timeline h3 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 10px;
+  color: #4f4f4f;
+}
+
+.timeline li {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 2px;
+  height: 100%;
+  background: #e83b3b;
+  border-radius: 2px;
+}
+
+.timeline .year {
+  min-width: 48px;
+  font-weight: 700;
+  color: #000;
+}
+
+.recipe {
+  background: #e1e1e1;
+}
+
+.chef {
+  font-size: 18px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.recipe-photo {
+  height: 240px;
+  border-radius: 14px;
+  background: url("img/recipe.png") center/cover no-repeat;
+}
+
+.ingredients .card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.ingredients h3,
+.ingredients h4 {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.ingredients h4 {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.ingredients ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.prep {
+  margin-top: 18px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.prep h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 12px;
+}
+
+.step {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 10px;
+  color: #5a5a5a;
+  line-height: 1.45;
+}
+
+.step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ff5a52;
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.tip {
+  margin-top: 12px;
+  background: #fff6dc;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 10px;
+  color: #5b512b;
+  border-left: 4px solid #f5c26b;
+}
+
+.tip-title {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.spots {
+  background: #ffffff;
+}
+
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.spot-card {
+  border-radius: 12px;
+  background: #dedede;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.spot-card.accent {
+  background: #dedede;
+  color: inherit;
+}
+
+.spot-card.accent .spot-icon {
+  background-image: url("img/spot-2.png");
+}
+
+.spot-card.accent-strong {
+  background: #dedede;
+  color: inherit;
+}
+
+.spot-card.accent-strong .spot-icon {
+  background-image: url("img/spot-3.png");
+}
+
+.spot-img {
+  height: 190px;
+  background: url("img/spot-1.png") center/cover no-repeat;
+}
+
+.spot-icon {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  background: center/cover no-repeat;
+}
+
+.spot-body {
+  padding: 10px 12px 12px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.spot-body h4 {
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.spot-city {
+  color: #cf2e2e;
+  font-weight: 700;
+  font-size: 9px;
+}
+
+
+.spot-highlight {
+  margin-top: 6px;
+  font-size: 9px;
+}
+
+.quality {
+  margin-top: 22px;
+  background: #323232;
+  color: #eaeaea;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.quality h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font-size: 10px;
+  color: #d5d5d5;
+}
+
+.q-title {
+  color: #ff6b61;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.quality p {
+  margin: 0 0 10px;
+}
+
+.footer-banner {
+  margin-top: 22px;
+  background: #3a3a3a;
+  color: #f0f0f0;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer-banner h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-banner p {
+  margin: 0;
+  font-size: 10px;
+  color: #d8d8d8;
+}
+
+@media (max-width: 900px) {
+  .history-grid,
+  .recipe-grid,
+  .spot-grid,
+  .quality-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: 200px;
+  }
+}
